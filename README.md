@@ -1,5 +1,5 @@
 # sudoku
-Sudoku solver using backtracking or backtracking + AC-3
+Sudoku solver using backtracking and AC-3.
 
 Run from terminal using:
 
@@ -14,4 +14,3 @@ See solver.py for choice of implementation of method to get the next unassigned 
 - Get the next value (get_next_unassigned)
 - Use the Minimum Remaining Values heuristic (get_unassigned_using_mrv)
 - Use the Minimum Remaining Values heuristic and the degree (get_unassigned_using_mrv_and_degree)
-- 
