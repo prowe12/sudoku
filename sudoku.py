@@ -39,14 +39,24 @@ def load_starting_vals(filename=''):
     @raises NameError  If filename is not '' and does not exist
     """
 
-    grid = [[0 for i in range(9)] for j in range(9)]
 
     if filename == '':
+        # Use default grid
+        grid = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
+                [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                [0, 0, 0, 4, 1, 9, 0, 0, 5],
+                [0, 0, 0, 0, 8, 0, 0, 7, 9]]
         return grid
 
     if not exists(filename):
         raise NameError('Puzzle file: ' + filename + ' not found.')
 
+    grid = [[0 for i in range(9)] for j in range(9)]
     orig_vals = loadtxt(filename, dtype=int, ndmin=2)
     for row in orig_vals:
         grid[int(row[0]-1)][int(row[1]-1)] = int(row[2])
@@ -62,14 +72,14 @@ def main(filename='', technique=''):
     sample inputs
     technique = 'both'
     filenames = ["",
-                 "../puzzles/bad.puzz",
-                 "../puzzles/easy.puzz",
-                 "../puzzles/evil.puzz",
-                 "../puzzles/hard.puzz",
-                 "../puzzles/medium.puzz",
-                 "../puzzles/one.puzz",
-                 "../puzzles/puzzle1.puzz",
-                 "../puzzles/solved.puzz"
+                 "puzzles/bad.puzz",
+                 "puzzles/easy.puzz",
+                 "puzzles/evil.puzz",
+                 "puzzles/hard.puzz",
+                 "puzzles/medium.puzz",
+                 "puzzles/one.puzz",
+                 "puzzles/puzzle1.puzz",
+                 "puzzles/solved.puzz"
                  ]
     filename = filenames[8]
     """
@@ -89,7 +99,6 @@ def main(filename='', technique=''):
 
     # Pause the plot for a bit
     boardPlot.finish(success)
-
 
 
 if __name__ == '__main__':

@@ -145,6 +145,10 @@ class BoardPlot(BoardRepresentation):
         fig.canvas.draw()
         fig.canvas.flush_events()
 
+        # Optionally, save the frame
+        #self.figno = 1
+        #plt.savefig('fig001.png')
+
         # Display
         plt.show()
         plt.pause(.001)
@@ -205,6 +209,12 @@ class BoardPlot(BoardRepresentation):
         self.fig.canvas.flush_events()
 
 
+        # Optionally, save the frame
+        #self.figno += 1
+        #figno = str(self.figno).zfill(3)
+        #filename = 'fig' + figno +'.png'
+        #plt.savefig(filename)
+
         # Display
         plt.show()
         plt.pause(.001)
@@ -217,12 +227,17 @@ class BoardPlot(BoardRepresentation):
         """
         plt.xlabel(msg, fontsize=self.fsize)
 
+        # Optionally, save the frame
+        #plt.savefig('fig_final.png' )
+
+
     def finish(self, success):
         """
         Wrap up the plot
         success  Wether or not the run was successful
         """
+
         if success:
             msg = 'Success!'
             self.message(msg)
-        plt.pause(60)
+        plt.pause(10)
