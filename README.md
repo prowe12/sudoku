@@ -14,3 +14,5 @@ See solver.py for choice of implementation of method to get the next unassigned 
 - Get the next value (get_next_unassigned)
 - Use the Minimum Remaining Values heuristic (get_unassigned_using_mrv)
 - Use the Minimum Remaining Values heuristic and the degree (get_unassigned_using_mrv_and_degree)
+
++<img src="./sudoku_easy.gif?raw=true">)
