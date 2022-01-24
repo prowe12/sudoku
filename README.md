@@ -7,7 +7,7 @@ $ python sudoku.py puzzlefilename backtrack
 
 Where 
 - puzzlefilename is a file of type ../puzzles/\*.puzz. It is optional. If not included, an empty board or a default board will be used.
-- backtrak indicates that backtracking alone should be used. It is also optional. If omitted, backtracking + AC-3 will be used.
+- backtrack indicates that backtracking alone should be used. It is also optional. If omitted, backtracking + AC-3 will be used.
 
 Notes:
 See solver.py for choice of implementation of method to get the next unassigned variable. Options include:
