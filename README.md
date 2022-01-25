@@ -1,8 +1,7 @@
 # sudoku
-Sudoku solver using backtracking and AC-3.
-
 <img src="./sudoku_easy_looping.gif?raw=true">
 
+Sudoku solver using backtracking and AC-3.
 Run from terminal using:
 
 $ python sudoku.py puzzlefilename backtrack
