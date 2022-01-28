@@ -20,8 +20,8 @@ class BoardRepresentation():
     """Informal interface for classes that create a board representation,
     e.g. by printing to standard output or plotting the sudoku board
     These are the methods that must be included in the subclasses"""
+    
     @abstractmethod
-
     def __init__(self, grid, techinque):
         """
         Plot the starting sudoku board and set up the class
@@ -29,6 +29,7 @@ class BoardRepresentation():
         """
         raise NotImplementedError
 
+    @abstractmethod
     def update(self, grid, xpos=-1, ypos=-1):
         """Update the Sudoko board plot with the new grid
         @param grid  Grid of Sudoku numbers, list of lists
@@ -37,12 +38,14 @@ class BoardRepresentation():
         """
         raise NotImplementedError
 
+    @abstractmethod
     def message(self, msg):
         """
         Print a message
         """
         raise NotImplementedError
 
+    @abstractmethod
     def finish(self, success):
         """
         Finished; print final message regarding success
